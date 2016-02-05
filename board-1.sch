@@ -212,13 +212,13 @@ USB_DN
 $Comp
 L +3V3 #PWR07
 U 1 1 5688E4AA
-P 4800 3850
-F 0 "#PWR07" H 4800 3700 50  0001 C CNN
-F 1 "+3V3" H 4650 3900 50  0000 C CNN
-F 2 "" H 4800 3850 50  0000 C CNN
-F 3 "" H 4800 3850 50  0000 C CNN
-	1    4800 3850
-	0    -1   -1   0   
+P 4500 3850
+F 0 "#PWR07" H 4500 3700 50  0001 C CNN
+F 1 "+3V3" H 4350 3900 50  0000 C CNN
+F 2 "" H 4500 3850 50  0000 C CNN
+F 3 "" H 4500 3850 50  0000 C CNN
+	1    4500 3850
+	1    0    0    -1  
 $EndComp
 $Comp
 L C C3
@@ -380,10 +380,6 @@ Wire Wire Line
 Wire Wire Line
 	3500 3300 4100 3300
 Wire Wire Line
-	3500 3600 3900 3600
-Wire Wire Line
-	3500 3500 4000 3500
-Wire Wire Line
 	1400 3000 1800 3000
 Wire Wire Line
 	1800 3000 1800 2950
@@ -424,9 +420,6 @@ Wire Wire Line
 Wire Wire Line
 	1900 3500 1900 3350
 Connection ~ 1700 3350
-Connection ~ 1200 2250
-Wire Wire Line
-	1200 1550 1200 2600
 Wire Wire Line
 	1700 2500 1700 2700
 Connection ~ 1750 2500
@@ -496,8 +489,6 @@ F 3 "" H 4850 3300 50  0000 C CNN
 	1    4850 3300
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	4700 3300 4900 3300
 $Comp
 L +3V3 #PWR013
 U 1 1 568AD377
@@ -563,11 +554,11 @@ Wire Wire Line
 Wire Wire Line
 	3850 2300 3850 2150
 Text Label 3550 2300 0    60   ~ 0
-UART_RCV
+UART_SND
 Wire Wire Line
 	3850 2050 3500 2050
 Text Label 3500 2050 0    60   ~ 0
-UART_SND
+UART_RCV
 Wire Wire Line
 	2000 3400 1950 3400
 Wire Wire Line
@@ -575,7 +566,7 @@ Wire Wire Line
 Wire Wire Line
 	1950 3800 1700 3800
 Text Label 1700 3800 0    60   ~ 0
-UART_SND
+UART_RCV
 $Comp
 L CONN_01X05 P4
 U 1 1 56AAFDA2
@@ -588,24 +579,7 @@ F 3 "" H 5100 3750 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	3500 3400 3500 3950
-Wire Wire Line
-	3500 3950 4900 3950
-Wire Wire Line
-	4800 3850 4900 3850
-Wire Wire Line
-	4700 3300 4700 3750
-Connection ~ 4850 3300
-Wire Wire Line
-	4700 3750 4900 3750
-Wire Wire Line
-	4900 3550 4000 3550
-Wire Wire Line
-	4000 3550 4000 3500
-Wire Wire Line
-	4900 3650 3900 3650
-Wire Wire Line
-	3900 3650 3900 3600
+	4500 3850 4900 3850
 Wire Wire Line
 	1250 3950 1250 4300
 Wire Wire Line
@@ -618,4 +592,82 @@ Wire Wire Line
 Wire Wire Line
 	1050 4650 1250 4650
 Connection ~ 1250 4650
+Wire Wire Line
+	3700 3950 4900 3950
+Wire Wire Line
+	3700 3500 3700 3950
+Wire Wire Line
+	3700 3500 3500 3500
+Wire Wire Line
+	4900 3650 4000 3650
+Wire Wire Line
+	4000 3650 4000 3400
+Wire Wire Line
+	4000 3400 3500 3400
+Wire Wire Line
+	4900 3550 3600 3550
+Wire Wire Line
+	3600 3550 3600 3600
+Wire Wire Line
+	3600 3600 3500 3600
+Wire Wire Line
+	4850 3300 4900 3300
+Wire Wire Line
+	4900 3750 4750 3750
+Wire Wire Line
+	4750 3750 4750 4050
+$Comp
+L GND #PWR014
+U 1 1 56AD61B0
+P 4750 4050
+F 0 "#PWR014" H 4750 3800 50  0001 C CNN
+F 1 "GND" H 4758 3876 50  0000 C CNN
+F 2 "" H 4750 4050 50  0000 C CNN
+F 3 "" H 4750 4050 50  0000 C CNN
+	1    4750 4050
+	1    0    0    -1  
+$EndComp
+$Comp
+L CP C7
+U 1 1 56AD66F2
+P 1250 950
+F 0 "C7" H 1368 996 50  0000 L CNN
+F 1 "47uF" H 1368 904 50  0000 L CNN
+F 2 "Capacitors_ThroughHole:C_Radial_D5_L6_P2.5" H 1288 800 50  0001 C CNN
+F 3 "" H 1250 950 50  0000 C CNN
+	1    1250 950 
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR015
+U 1 1 56AD6750
+P 1250 1200
+F 0 "#PWR015" H 1250 950 50  0001 C CNN
+F 1 "GND" H 1258 1026 50  0000 C CNN
+F 2 "" H 1250 1200 50  0000 C CNN
+F 3 "" H 1250 1200 50  0000 C CNN
+	1    1250 1200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1250 1100 1250 1200
+Wire Wire Line
+	1000 800  1250 800 
+Connection ~ 1000 800 
+$Comp
+L D D2
+U 1 1 56B145BA
+P 1200 1900
+F 0 "D2" V 1246 1822 50  0000 R CNN
+F 1 "D" V 1154 1822 50  0000 R CNN
+F 2 "Diodes_ThroughHole:Diode_DO-35_SOD27_Horizontal_RM10" H 1200 1900 50  0001 C CNN
+F 3 "" H 1200 1900 50  0000 C CNN
+	1    1200 1900
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	1200 2050 1200 2600
+Wire Wire Line
+	1200 1750 1200 1550
+Connection ~ 1200 2250
 $EndSCHEMATC
