@@ -1,0 +1,15 @@
+PIC32MX pin assignments:
+    RA0: GPIO (for LED)
+    RA1: U2RX
+    RA2: OSC1
+    RA3: OSC2
+    RB0: U2TX
+    RB5: TMS
+    RB7: TDI
+    RB8: TCK
+    RB9: TDO
+    RB10: USB_DP
+    RB11: USB_DN
+    RB13: U1RX
+    RB14: GPIO (for entering AT cmd mode)
+    RB15: U1TX

@@ -1,0 +1,9 @@
+==== Revision 2 ====
+- Added OSHW logo, licensed under CERN OHL 1.2.
+- Added diode between USB power-in and voltage regulator
+- Added 47uF power cap to smooth regulator output
+- Changed Bluetooth header pinout to better reflect actual module pinout
+- Annotated board headers more clearly
+
+==== Revision 1 ====
+- Initial test PCB
