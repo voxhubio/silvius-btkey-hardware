@@ -1,3 +1,7 @@
+==== Revision 3 ====
+- Changed some resistor footprints from 15mm to 10mm
+- Added new header to support foot pedals and other simple expansions
+
 ==== Revision 2 ====
 - Added OSHW logo, licensed under CERN OHL 1.2.
 - Added diode between USB power-in and voltage regulator

@@ -5,4 +5,9 @@ D B connector
 K USB USB_B
 $ENDCMP
 #
+$CMP USB_B_fixed
+D B connector
+K USB USB_B
+$ENDCMP
+#
 #End Doc Library

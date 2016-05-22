@@ -47,28 +47,6 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L USB_B P2
-U 1 1 5688ADEE
-P 1650 1250
-F 0 "P2" H 1673 1582 50  0000 C CNN
-F 1 "USB" H 1673 1490 50  0000 C CNN
-F 2 "footprint:USB_B" V 1600 1150 50  0000 C CNN
-F 3 "" V 1600 1150 50  0000 C CNN
-	1    1650 1250
-	1    0    0    -1  
-$EndComp
-$Comp
-L CONN_01X02 P1
-U 1 1 5688AE71
-P 850 4450
-F 0 "P1" H 927 4488 50  0000 L CNN
-F 1 "RESET" H 927 4396 50  0000 L CNN
-F 2 "Pin_Headers:Pin_Header_Straight_1x02" H 850 4450 50  0001 C CNN
-F 3 "" H 850 4450 50  0000 C CNN
-	1    850  4450
-	-1   0    0    1   
-$EndComp
-$Comp
 L PIC32MX2XX U2
 U 1 1 5688C63C
 P 2750 3050
@@ -152,7 +130,7 @@ U 1 1 5688D2DC
 P 1500 3950
 F 0 "R2" V 1292 3950 50  0000 C CNN
 F 1 "470" V 1384 3950 50  0000 C CNN
-F 2 "Resistors_ThroughHole:Resistor_Horizontal_RM15mm" V 1430 3950 50  0000 C CNN
+F 2 "Resistors_ThroughHole:Resistor_Horizontal_RM10mm" V 1430 3950 50  0000 C CNN
 F 3 "" H 1500 3950 50  0000 C CNN
 	1    1500 3950
 	0    1    1    0   
@@ -163,7 +141,7 @@ U 1 1 5688D346
 P 1000 3950
 F 0 "R1" V 1208 3950 50  0000 C CNN
 F 1 "10K" V 1116 3950 50  0000 C CNN
-F 2 "Resistors_ThroughHole:Resistor_Horizontal_RM15mm" V 930 3950 50  0000 C CNN
+F 2 "Resistors_ThroughHole:Resistor_Horizontal_RM10mm" V 930 3950 50  0000 C CNN
 F 3 "" H 1000 3950 50  0000 C CNN
 	1    1000 3950
 	0    -1   -1   0   
@@ -202,13 +180,13 @@ F 3 "" H 1950 1400 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 Text Label 2100 1750 0    60   ~ 0
-USB_DN
+USB_N
 Text Label 2100 1650 0    60   ~ 0
-USB_DP
+USB_P
 Text Label 4100 3200 0    60   ~ 0
-USB_DP
+USB_P
 Text Label 4100 3300 0    60   ~ 0
-USB_DN
+USB_N
 $Comp
 L +3V3 #PWR07
 U 1 1 5688E4AA
@@ -244,8 +222,6 @@ F 3 "" H 1700 2850 50  0000 C CNN
 $EndComp
 NoConn ~ 3500 2700
 NoConn ~ 3500 2600
-NoConn ~ 3500 2500
-NoConn ~ 3500 2400
 NoConn ~ 2000 3700
 $Comp
 L MCP1700 U1
@@ -432,7 +408,7 @@ U 1 1 568A2CB4
 P 2700 4500
 F 0 "R4" V 2492 4500 50  0000 C CNN
 F 1 "330" V 2584 4500 50  0000 C CNN
-F 2 "Resistors_ThroughHole:Resistor_Horizontal_RM15mm" V 2630 4500 50  0001 C CNN
+F 2 "Resistors_ThroughHole:Resistor_Horizontal_RM10mm" V 2630 4500 50  0001 C CNN
 F 3 "" H 2700 4500 50  0000 C CNN
 	1    2700 4500
 	0    1    1    0   
@@ -514,7 +490,7 @@ F 3 "" H 5100 3000 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	4900 2700 4850 2700
+	4000 2700 4900 2700
 Wire Wire Line
 	4850 2700 4850 2350
 Wire Wire Line
@@ -582,16 +558,6 @@ Wire Wire Line
 	4500 3850 4900 3850
 Wire Wire Line
 	1250 3950 1250 4300
-Wire Wire Line
-	1050 4250 1050 4400
-Wire Wire Line
-	1050 4250 1250 4250
-Connection ~ 1250 4250
-Wire Wire Line
-	1050 4500 1050 4650
-Wire Wire Line
-	1050 4650 1250 4650
-Connection ~ 1250 4650
 Wire Wire Line
 	3700 3950 4900 3950
 Wire Wire Line
@@ -670,4 +636,33 @@ Wire Wire Line
 Wire Wire Line
 	1200 1750 1200 1550
 Connection ~ 1200 2250
+$Comp
+L USB_B_fixed P2
+U 1 1 56CA5BB4
+P 1650 1250
+F 0 "P2" H 1673 1582 50  0000 C CNN
+F 1 "USB_B_fixed" H 1673 1490 50  0000 C CNN
+F 2 "footprint:USB_B" V 1600 1150 50  0001 C CNN
+F 3 "" V 1600 1150 50  0000 C CNN
+	1    1650 1250
+	1    0    0    -1  
+$EndComp
+$Comp
+L CONN_01X03 P1
+U 1 1 57416384
+P 4200 2500
+F 0 "P1" H 4277 2538 50  0000 L CNN
+F 1 "CONN_01X03" H 4277 2446 50  0000 L CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x03" H 4200 2500 50  0001 C CNN
+F 3 "" H 4200 2500 50  0000 C CNN
+	1    4200 2500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3500 2400 4000 2400
+Wire Wire Line
+	3500 2500 4000 2500
+Wire Wire Line
+	4000 2600 4000 2700
+Connection ~ 4850 2700
 $EndSCHEMATC

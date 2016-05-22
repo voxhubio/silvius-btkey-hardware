@@ -1,9 +1,11 @@
 PIC32MX pin assignments:
-    RA0: GPIO (for LED)
+    RA0: GPIO, or OC1 (for LED)
     RA1: U2RX
     RA2: OSC1
     RA3: OSC2
     RB0: U2TX
+    RB1: GPIO (IO1, switch header)
+    RB2: GPIO (IO0, switch header)
     RB5: TMS
     RB7: TDI
     RB8: TCK
