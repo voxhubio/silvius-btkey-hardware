@@ -1,5 +1,6 @@
 ==== Revision 3 ====
 - Changed some resistor footprints from 15mm to 10mm
+- Changed capacitor footprints
 - Added new header to support foot pedals and other simple expansions
 
 ==== Revision 2 ====
